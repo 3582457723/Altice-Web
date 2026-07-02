@@ -2,13 +2,15 @@ body {
     font-family: 'Noto Sans JP', Arial, sans-serif;
     background-color: #ddfff7;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .header {
+    width: 100%;
+    box-sizing: border-box;
     background-color: #aaffe7d2;
     display: flex;
     justify-content: center;
