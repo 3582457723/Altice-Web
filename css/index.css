@@ -8,7 +8,10 @@ body {
     align-items: center;
 }
 
-a {}
+a {
+    color: #00CFFF;
+    text-decoration: none;
+}
 
 .header {
     width: 100%;
