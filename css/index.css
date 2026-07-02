@@ -24,6 +24,8 @@ body {
     /* ページ横幅すべて */
     width: 100%;
     display: flex;
+    jistify-content: center;
+    align-items: center;
 }
 
 .box {
