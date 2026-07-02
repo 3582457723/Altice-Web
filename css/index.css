@@ -1,0 +1,16 @@
+body {
+    font-family: 'Noto Sans JP', Arial, sans-serif;
+    background-color: #ddfff7;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    background-color: #aaffe7d2;
+}
+
+.box {
+  margin-bottom: 10px; /* 下の div との隙間を 20px にする */
+}
