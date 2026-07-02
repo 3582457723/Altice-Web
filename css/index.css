@@ -22,7 +22,7 @@ body {
 .header .box {
     height: 50px;
     /* ページ横幅すべて */
-    width: 80000px;
+    width: 100%;
     display: flex;
 }
 
