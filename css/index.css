@@ -8,6 +8,8 @@ body {
     align-items: center;
 }
 
+a {}
+
 .header {
     width: 100%;
     box-sizing: border-box;
@@ -30,4 +32,11 @@ body {
 
 .box {
   margin-bottom: 10px; /* 下の div との隙間を 20px にする */
+}
+
+/* header 内のすべての div を中央寄せ */
+.header div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
