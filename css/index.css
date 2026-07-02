@@ -24,7 +24,7 @@ body {
     /* ページ横幅すべて */
     width: 100%;
     display: flex;
-    jistify-content: center;
+    justify-content: center;
     align-items: center;
 }
 
