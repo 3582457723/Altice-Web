@@ -21,9 +21,9 @@ body {
 
 .header .box {
     height: 50px;
-    width: 100%;
+    /* ページ横幅すべて */
+    width: 80000px;
     display: flex;
-    gap: 20px;
 }
 
 .box {
