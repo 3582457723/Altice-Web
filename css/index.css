@@ -43,3 +43,15 @@ a {
         justify-content: center;
         align-items: center;
 }
+
+.product-button {
+    height: 50px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    gap: 20px;
+    background-color: #55F1F1;
+}
