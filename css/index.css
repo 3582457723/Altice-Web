@@ -68,3 +68,74 @@ a {
     text-decoration: none;
     font-family: 'Comic Sans M';
 }
+
+/* 3D空間の奥行きを設定（数値が小さいほど傾きが急に見えます） */
+.card-container {
+  perspective: 1000px;
+  width: 380px;
+  height: 220px;
+  margin: 50px auto;
+}
+
+/* カード全体のスタイル */
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #ffffff;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  
+  /* 3D変形を子要素に引き継ぐ設定 */
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  
+  /* レイアウト調整用 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 子要素をさらに手前に浮かせる（3Dの飛び出し効果） */
+.card-front > * {
+  transform: translateZ(40px);
+}
+
+.card-front {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 名刺のパーツデザイン */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #e0e0e0;
+}
+.logo { font-size: 1.5rem; color: #ffd700; }
+
+.name {
+  font-size: 1.8rem;
+  margin: 0 0 5px 0;
+  letter-spacing: 3px;
+}
+.title {
+  font-size: 0.85rem;
+  color: #ffd700;
+  margin: 0;
+}
+
+.card-footer {
+  font-size: 0.75rem;
+  color: #cccccc;
+  line-height: 1.5;
+}
+
