@@ -67,7 +67,51 @@
                 <a id="product-botton" href="https://sixgp-project.studio.site/"><h3>Srecure IP eXtend Graphical Protocol(SIXGP)</h3></a>
         </div>
         <div style="height: 15px;"></div>
+        <h2 id="about">ABOUT ME</h2>
 
+        //名刺風3Dカード
+        <div class="card-container" id="tiltCard">
+  <div class="card">
+    <!-- 光の反射エフェクト -->
+    <div class="shine"></div>
+    
+    <!-- 名刺のコンテンツ -->
+    <div class="card-content">
+      
+      <!-- 左側：画像エリア -->
+      <div class="avatar-area">
+        <!-- 💡 src="xxx" の部分にお手持ちの画像パスを指定してください -->
+        <img src="altice-image.png" alt="Altice" class="avatar-img">
+      </div>
+
+      <!-- 右側：プロフィール情報 -->
+      <div class="info-area">
+        <div class="logo">✦ CHARACTER CARD</div>
+        
+        <div class="main-info">
+          <div class="name-box">
+            <h2>アルティス</h2>
+            <span class="sub-name">Altice</span>
+          </div>
+          <p class="gender">GENDER: <span>オス (Male)</span></p>
+        </div>
+
+        <div class="sub-info">
+          <div class="info-item">
+            <span class="label">BIRTHDAY</span>
+            <span class="value">April 29</span>
+          </div>
+          <div class="info-item">
+            <span class="label">AGE</span>
+            <span class="value">15</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+        
     </body>
     <script>
         window.addEventListener('scroll', function() {
@@ -80,6 +124,39 @@
           } else {
             header.classList.remove('is-show');
           }
+        });
+
+        const card = document.querySelector('.card');
+        const container = document.querySelector('.card-container');
+
+        // マウスが動いたときの処理
+        container.addEventListener('mousemove', (e) => {
+          const rect = container.getBoundingClientRect();
+  
+          // コンテナの中心からのマウス位置を計算 (-1 から 1 の範囲)
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+  
+          // 傾く最大角度（度）
+          const maxRotate = 20; 
+  
+          // マウスの動きに合わせて回転（X軸とY軸を入れ替えるのがポイント）
+          card.style.transform = `rotateY(${x * maxRotate}deg) rotateX(${-y * maxRotate}deg)`;
+  
+          // シャドウも傾きに合わせて移動させて立体感を強調
+          card.style.boxShadow = `${-x * 30}px ${-y * 30}px 40px rgba(0,0,0,0.4)`;
+        });
+
+        // マウスが外れたら元の位置に戻す
+        container.addEventListener('mouseleave', () => {
+          card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+          card.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.3)';
+          card.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
+        });
+
+        // 再びマウスが入ったときはスムーズなアニメーションを一時無効にして追従性を上げる
+        container.addEventListener('mouseenter', () => {
+          card.style.transition = 'none';
         });
 
     </script>
