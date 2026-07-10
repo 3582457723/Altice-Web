@@ -69,4 +69,18 @@
         <div style="height: 15px;"></div>
 
     </body>
+    <script>
+        window.addEventListener('scroll', function() {
+          const header = document.getElementById('header');
+          const scrollY = window.scrollY; // 現在のスクロール量
+
+          // 100px以上スクロールしたらクラスを付与
+          if (scrollY > 50) {
+            header.classList.add('is-show');
+          } else {
+            header.classList.remove('is-show');
+          }
+        });
+
+    </script>
 </html>
