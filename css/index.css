@@ -46,7 +46,7 @@ a {
 
 .product-button {
     height: 50px;
-    width: 250px;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
