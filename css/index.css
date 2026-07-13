@@ -71,6 +71,7 @@ a {
 
 /* 3D空間の奥行きを設定（数値が小さいほど傾きが急に見えます） */
 .card-container {
+  align-items: center;
   perspective: 1000px;
   width: 380px;
   height: 220px;
@@ -86,7 +87,6 @@ a {
   color: #ffffff;
   padding: 25px;
   box-sizing: border-box;
-  align-items: center;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   font-family: 'Helvetica Neue', Arial, sans-serif;
   
