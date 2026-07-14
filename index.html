@@ -6,7 +6,19 @@
         <link rel="icon" href="./images/favicon.png">
     </head>
     <body>
-        <header id="header" class="header" style="height: 50px; width: 100%;"><div class="box"><div class="box"><a href="#home"><h4>HOME</h4></a></div><div class="box"><a href="#works"><h4>WORKS</h4></a></div><div class="box"><a href="#about"><h4>ABOUT ME</h4></a></div></div></header>
+      <header class="b44-header">
+  <div class="b44-shine"></div>
+  <div class="b44-sparkle"></div>
+  <div class="b44-header-inner">
+    <div class="b44-header-logo"><img class="b44-header-icon" src="https://3582457723.github.io/Altice-Web/images/favicon.png" alt=""><span><div class="overlay">アルティス邸</div></span></div>
+    <nav class="b44-header-nav">
+      <a href="#home" class="b44-header-link">HOME</a>
+      <a href="#works" class="b44-header-link">WORKS</a>
+      <a href="#about" class="b44-header-link">ABOUT ME</a>
+      <a href="#" class="b44-header-link">CONTACT</a>
+    </nav>
+  </div>
+</header>
         <p></p>
         <div class="overlay"><div class="fade-in"><h1 id="home">ようこそアルティス邸へ！！</h1></div></div></div>
         <div style="height: 15px;"></div>
@@ -209,6 +221,16 @@
     el.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
     el.style.transform = '';
     el.style.boxShadow = '';
+  });
+});
+
+document.querySelectorAll('.b44-header').forEach(el => {
+  el.addEventListener('mousemove', (e) => {
+    const rect = el.getBoundingClientRect();
+    const mx = (e.clientX - rect.left) / rect.width - 0.5;
+    const my = (e.clientY - rect.top) / rect.height - 0.5;
+    el.style.setProperty('--shx', ((mx + 0.5) * 100).toFixed(1) + '%');
+    el.style.setProperty('--shy', ((my + 0.5) * 100).toFixed(1) + '%');
   });
 });
     </script>
