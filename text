@@ -1,0 +1,23 @@
+<div class="card">
+<div style="align-items: center;">
+        <div class="card-container" id="tiltCard">
+    <!-- 光の反射エフェクト -->
+    <div class="shine"></div>
+    
+    <!-- 名刺のコンテンツ -->
+    <div class="card-content">
+      <!-- 左側：画像エリア -->
+          <div class="logo" ><div class="overlay">✦ CHARACTER CARD</div></div>
+        <!-- 💡 src="xxx" の部分にお手持ちの画像パスを指定してください -->
+          <div style="display: flex; align-items: center;">
+            <img src="https://3582457723.github.io/Altice-Web/images/altice-image.png" alt="Altice" class="avatar-img" style="height: 50px; width: 50px; margin-right: 5px;">
+            <h1><div class="overlay">アルティス / Altice</div></h1>
+          </div>
+      <!-- 右側：プロフィール情報 -->
+          <div class="info-area">        
+            <p class="gender"><div class="overlay">GENDER オス | BIRTHDAY April 29 | AGE 15</div></span></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

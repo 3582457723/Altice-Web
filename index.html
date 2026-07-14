@@ -70,9 +70,8 @@
         </div>
         <div style="height: 15px;"></div>
         <h2 id="about"><div class="overlay"><div class="fade-in">ABOUT ME</div></div></h2>
-        <div style="align-items: center;">
-        <div class="card-container" id="tiltCard">
-  <div class="card">
+        
+        <div class="card">
     <!-- 光の反射エフェクト -->
     <div class="shine"></div>
     
@@ -194,5 +193,22 @@
           card.style.transition = 'none';
         });
 
+        document.querySelectorAll('.b44-bc').forEach(el => {
+  el.addEventListener('mouseenter', () => { el.style.transition = 'none'; });
+  el.addEventListener('mousemove', (e) => {
+    const rect = el.getBoundingClientRect();
+    const mx = (e.clientX - rect.left) / rect.width - 0.5;
+    const my = (e.clientY - rect.top) / rect.height - 0.5;
+    el.style.transform = 'perspective(1000px) rotateX(' + (-my * 15).toFixed(2) + 'deg) rotateY(' + (mx * 15).toFixed(2) + 'deg)';
+    el.style.boxShadow = (-mx * 30).toFixed(0) + 'px ' + ((-my * 30) + 20).toFixed(0) + 'px 50px rgba(0,0,0,0.25)';
+    el.style.setProperty('--shx', (50 - mx * 45).toFixed(1) + '%');
+    el.style.setProperty('--shy', (50 - my * 45).toFixed(1) + '%');
+  });
+  el.addEventListener('mouseleave', () => {
+    el.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+    el.style.transform = '';
+    el.style.boxShadow = '';
+  });
+});
     </script>
 </html>
